@@ -38,7 +38,7 @@ app.post('/add', postData);
 
 async function postData(req, res) {
   const userURL = req.body.userURL;
-  const response = await fetch(`${baseURL}?key=${process.env.apiKey}&url=${userURL}&lang=en`);
+  const response = await fetch(`${baseURL}?key=${process.env.API_KEY}&url=${userURL}&lang=en`);
 
   try {
     const data = await response.json();

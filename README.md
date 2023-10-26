@@ -27,7 +27,7 @@ Create your own API key
 2. Create `.env` file
 3. Add the following line to the `.env` file and replace the `**************************` with your API key and save
 ```
-apiKey = **************************
+API_KEY = **************************
 ```
 Run the project
 ```
