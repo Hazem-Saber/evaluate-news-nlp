@@ -32,8 +32,9 @@ API_KEY=**************************
 Run the project
 ```
 npm run build-prod
-npm start
+npm run start
 ```
+http://localhost:8081/
 
 ## Testing
 Jest unit testing
