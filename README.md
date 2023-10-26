@@ -20,7 +20,7 @@ A web tool that allows users to run Natural Language Processing (NLP) on article
 ```
 git clone https://github.com/Hazem-Saber/evaluate-news-nlp.git
 cd evaluate-news-nlp
-npm i
+npm i --force
 ```
 Create your own API key
 1. Sign up [meaningcloud](https://www.meaningcloud.com/developer/create-account) and get your API key
