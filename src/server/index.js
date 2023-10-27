@@ -42,6 +42,7 @@ async function postData(req, res) {
 
   try {
     const data = await response.json();
+    console.log(data.status);
     const projectData = {
       agreement: data.agreement,
       confidence: data.confidence,

@@ -10,6 +10,10 @@ describe("Testing the URL functionality", () => {
   })
 
   test("Testing the checkForURL() function", () => {
+    expect(checkForURL("example@gmail.com")).toBeFalsy();
+  })
+
+  test("Testing the checkForURL() function", () => {
     expect(checkForURL("")).toBeFalsy();
   })
 
