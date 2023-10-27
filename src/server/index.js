@@ -42,15 +42,27 @@ async function postData(req, res) {
 
   try {
     const data = await response.json();
-    console.log(data.status);
-    const projectData = {
-      agreement: data.agreement,
-      confidence: data.confidence,
-      subjectivity: data.subjectivity,
-      irony: data.irony
-    } 
+    const code = data.status.code;
+    const msg = data.status.msg;
+    let projectData = {};
+
+    if (code === '0') {
+      projectData = {
+        code: code,
+        agreement: data.agreement,
+        confidence: data.confidence,
+        subjectivity: data.subjectivity,
+        irony: data.irony
+      }
+    } else {
+      projectData = {
+        code: code,
+        msg: msg
+      }
+    }
     console.log(projectData);
     res.send(projectData);
+
   } catch (error) {
     console.error('error', error)
   }

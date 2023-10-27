@@ -35,13 +35,18 @@ const postURL = async (url='', data={}) => {
 
 // Function to update UI 
 const updateUI = (newData) => {
-  document.querySelector('#results').innerHTML = 
-  `
-  Agreement: ${newData.agreement}<br>
-  Confidence: ${newData.confidence}<br>
-  Irony: ${newData.irony}<br>
-  Subjectivity: ${newData.subjectivity}
-  `
+  console.log(newData);
+  if (newData.code === '0') {
+    document.querySelector('#results').innerHTML = 
+    `
+    Agreement: ${newData.agreement}<br>
+    Confidence: ${newData.confidence}<br>
+    Irony: ${newData.irony}<br>
+    Subjectivity: ${newData.subjectivity}
+    `
+  } else {
+    alert(newData.msg);
+  }
 }
 
 export { handleSubmit }
